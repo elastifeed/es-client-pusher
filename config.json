@@ -1,0 +1,51 @@
+{
+    "paths": {
+        "watch": "src/**/*",
+        "scss": {
+            "files": [
+                "src/scss/app.scss"
+            ],
+            "includePaths": [
+                "node_modules/normalize.css",
+                "node_modules/select2/dist/css",
+                "node_modules/sff/src"
+            ],
+            "dist": "dist/assets/css"
+        },
+        "js": {
+            "files": [
+                [
+                    "node_modules/jquery/dist/jquery.js",
+                    "node_modules/select2/dist/js/select2.full.js",
+                    "src/js/app.js"
+                ]
+            ],
+            "dist": "dist/assets/js"
+        },
+        "tasap": {
+            "files": [
+                "src/html/*.html"
+            ],
+            "dist": "dist"
+        },
+        "assets": {
+            "files": [
+                {
+                    "from": "src/img/**/*",
+                    "to": "img"
+                },
+                {
+                    "from": "src/fonts/**/*",
+                    "to": "font"
+                }
+            ],
+            "dist": "dist/assets"
+        }
+    },
+    "options": {
+        "sync": {
+            "rel": true,
+            "value": "dist"
+        }
+    }
+}

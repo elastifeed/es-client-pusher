@@ -1,0 +1,35 @@
+{{@ ./src/html/partials/**/*.html }}
+<PageBoiler>
+
+    <div class="flex align-center">
+        <div class="flex__item / small-6 large-3">
+            <h1 class="h2">
+                Seite speichern
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            </p>
+            <div class="field">
+                <label for="cat-select">
+                    Kategorien
+                </label>
+                <select data-placeholder="Kategorien auswählen..." id="cat-select" class="select2-select" name="categories[]" multiple="multiple">
+                    <option>Cat 1</option>
+                    <option>Cat 2</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="tag-select">
+                    Tags
+                </label>
+                <select data-placeholder="Tags eingeben..." id="tag-select" class="select2-select select2-select--tags" name="tags[]" multiple="multiple"></select>
+            </div>
+            <button class="button prim">Seite jetzt speichern!</button>
+        </div>
+        <div class="flex__item / small-6 large-3">
+            <picture class="page-preview">
+                <img src="http://placehold.it/500x500">
+            </picture>
+        </div>
+    </div>
+</PageBoiler>

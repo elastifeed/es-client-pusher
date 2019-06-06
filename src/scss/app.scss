@@ -1,0 +1,215 @@
+@import './settings.scss';
+@import "normalize";
+@import "select2";
+@import "sff";
+
+@include sff();
+
+
+body,
+html {
+    height: 100%;
+}
+
+
+body {
+    background: $bg;
+}
+
+select {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 30px 15px;
+    @media (min-width: getSize('large')) {
+        padding: 30px;
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 1100px;;
+    }
+}
+
+.page-preview {
+    border: 1px solid rgba(#000, 0.13);
+    box-shadow: 0 15px 35px rgba(#000, 0.13);
+    display: block;
+    margin-left: 60px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.feed {
+    &__item {
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 30px;
+
+        &::before,
+        &::after {
+            content: '';
+            background: $c1;
+            position: absolute;
+            top: 0.25em;
+        }
+
+        &::before {
+            width: 9px;
+            height: 9px;
+            left: 0;
+            border-radius: 50%;
+        }
+
+        &::after {
+            width: 1px;
+            height: 100%;
+            left: 4px;
+        }
+
+        &:last-child {
+            padding-bottom: 10px;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.login-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.field {
+    label {
+        font-weight: bold;
+    }
+}
+
+.select2-container {
+    .select2-selection {
+        padding: 12px 15px;
+        border: none;
+        border-radius: 4px;
+        background: $white;
+        box-shadow: 0 3px 6px rgba(#000, 0.16);
+        font-size: 0.8em;
+
+        ul,
+        li {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        ul {
+            display: flex !important;
+            align-items: center;
+        }
+
+        input {
+            margin: 0 !important;
+        }
+
+        .select2-selection__choice {
+            position: relative;
+            padding: 5px 10px 4px 26px !important;
+            margin-right: 5px !important;
+            background: $white;
+            border: 1px solid $f-color;
+
+            span {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                color: $f-color;
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    .select2-results__options {
+        li {
+            margin: 0 !important;
+        }
+    }
+}
+
+.button {
+    font-weight: bold;
+
+    &.prim {
+        box-shadow: 0 3px 6px rgba(#000, 0.16);
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+}
+
+
+input,
+textarea,
+form button,
+select {
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(#000, 0.16);
+}
+
+.success-message {
+    display: flex;
+    justify-content: center;
+
+    &__content {
+        transition: all 0.2s;
+        background: $white;
+        box-shadow: 0 3px 6px rgba(#000, 0.16);
+        border-radius: 10px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: relative;
+        text-align: center;
+        padding: 125px 30px 30px 30px;
+
+        &::before {
+            transition: all 0.2s;
+            content: '';
+            background: url('../img/check-circle.svg') no-repeat;
+            background-size: contain;
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        @media (min-width: getSize('medium')) {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        @media (min-width: getSize('large')) {
+            text-align: left;
+            padding: 30px 45px 30px 120px;
+            &::before {
+                top: 50%;
+                left: 30px;
+                transform: translate(0, -50%);
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
+
+}
