@@ -1,0 +1,12 @@
+.page-preview {
+    border: 1px solid rgba(#000, 0.13);
+    box-shadow: 0 15px 35px rgba(#000, 0.13);
+    display: block;
+    margin-left: 60px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,18 @@
+@import './settings.scss';
+@import "~normalize.css";
+@import "~select2/dist/css/select2.css";
+@import "sff";
+
+// Init sff
+@include sff();
+
+// Load Style-Components
+@import './modules/_general.scss';
+@import './modules/button.scss';
+@import './modules/feed.scss';
+@import './modules/field.scss';
+@import './modules/login-form.scss';
+@import './modules/page-preview.scss';
+@import './modules/select2.scss';
+@import './modules/success-message.scss';
+@import './modules/wrapper.scss';
